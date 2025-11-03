@@ -3,10 +3,63 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Valle_Express.Views.LoginView"
              Title="LoginView">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+
+    <VerticalStackLayout Background= "White">
+        
+        <VerticalStackLayout Background="OrangeRed">
+            <Label Text="Valle Express C.O."  VerticalOptions="Center" HorizontalOptions="Center" Margin="5" TextColor="White"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Background="WhiteSmoke" Margin="30" Padding="20">
+            
+            <Label Text="Correo" FontAttributes="Bold" Margin="15"/>
+
+            <Entry Placeholder="tu@dominio.com"/>
+
+            <Label Text="Contraseña" FontAttributes="Bold" Margin="15"/>
+
+            <Entry IsPassword="True" Placeholder="********" />
+
+            <Button Text="Iniciar Sesión" 
+                    BackgroundColor="DarkOrange"
+                    TextColor="White" 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" 
+                    Margin="15"/>
+            
+            <Label Text= "O inicia con Google" 
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center" 
+                   Margin="20"/>
+
+            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <Image Source="google-icon.png"/>
+                <Button Text="Continuar con Google" 
+                        BackgroundColor="White" 
+                        TextColor="Black" 
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center" 
+                        Margin="15"/>
+            </HorizontalStackLayout>
+            
+            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <Image Source="circle-facebook-logo-png-transparent-picture.png" />
+
+                <Button Text="Continuar con Facebook" 
+                        BackgroundColor="White" 
+                        TextColor="Black" 
+                        Margin="15"/>
+                
+            </HorizontalStackLayout>
+
+            <Label Text="¿No tienes cuenta?" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Text="Registrate aquí" TextColor="DarkOrange" HorizontalOptions="Center" VerticalOptions="Center"/>
+        </VerticalStackLayout>
+
+
+        <Label Text="Valle Express S.A de C.V" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <Label Text="Derechos Reservados" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"/>
+
     </VerticalStackLayout>
+    
 </ContentPage>
