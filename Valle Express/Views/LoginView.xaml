@@ -5,8 +5,8 @@
              Title="LoginView">
 
     <VerticalStackLayout Background= "White">
-        
-        <VerticalStackLayout Background="OrangeRed">
+
+        <VerticalStackLayout Background="#d3a370">
             <Label Text="Valle Express C.O."  VerticalOptions="Center" HorizontalOptions="Center" Margin="5" TextColor="White"/>
         </VerticalStackLayout>
 
@@ -21,7 +21,7 @@
             <Entry IsPassword="True" Placeholder="********" />
 
             <Button Text="Iniciar Sesión" 
-                    BackgroundColor="DarkOrange"
+                    BackgroundColor="#d3a370"
                     TextColor="White" 
                     VerticalOptions="Center" 
                     HorizontalOptions="Center" 
@@ -53,7 +53,7 @@
             </HorizontalStackLayout>
 
             <Label Text="¿No tienes cuenta?" HorizontalOptions="Center" VerticalOptions="Center"/>
-            <Label Text="Registrate aquí" TextColor="DarkOrange" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Text="Registrate aquí" TextColor="#d3a370" HorizontalOptions="Center" VerticalOptions="Center"/>
         </VerticalStackLayout>
 
 

@@ -4,12 +4,25 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Valle_Express"
-    Shell.FlyoutBehavior="Disabled"
+    xmlns:views="clr-namespace:Valle_Express.Views"
+    Shell.FlyoutBehavior="Flyout"
     Title="Valle_Express">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <Shell.FlyoutHeader >
+        <StackLayout>
+            <Label Text="Valle Express C.O"
+                   TextColor="Gray"
+                   FontSize="Medium"
+                   Padding="30"
+                   BackgroundColor="White"/>
+        </StackLayout>
+    </Shell.FlyoutHeader>
 
+    <FlyoutItem Title="Incio de Sesión">
+        <ShellContent ContentTemplate="{DataTemplate views:LoginView}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Registro">
+        <ShellContent ContentTemplate="{DataTemplate views:RepartidorMainView}"/>
+    </FlyoutItem>
 </Shell>
