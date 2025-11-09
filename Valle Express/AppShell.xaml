@@ -22,7 +22,17 @@
         <ShellContent ContentTemplate="{DataTemplate views:LoginView}"/>
     </FlyoutItem>
 
+<<<<<<< Updated upstream
     <FlyoutItem Title="Registro">
         <ShellContent ContentTemplate="{DataTemplate views:RepartidorMainView}"/>
+=======
+    <FlyoutItem Title="Repartidor">
+        <ShellContent ContentTemplate="{DataTemplate views:RepartidorMainView}"
+                      Route="RepartidorMainView"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Negocio">
+        <ShellContent ContentTemplate="{DataTemplate views:NegocioMainView}"
+                      Route="NegocioMainView"/>
+>>>>>>> Stashed changes
     </FlyoutItem>
 </Shell>

@@ -65,6 +65,9 @@
 	  <MauiXaml Update="Views\LoginView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\NegocioMainView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\RepartidorMainView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
