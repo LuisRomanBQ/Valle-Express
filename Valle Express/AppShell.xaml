@@ -26,19 +26,12 @@
 
     <FlyoutItem Title="Repartidor">
         <ShellContent ContentTemplate="{DataTemplate views:RepartidorMainView}"/>
-=======
-    <FlyoutItem Title="Repartidor">
-        <ShellContent ContentTemplate="{DataTemplate views:RepartidorMainView}"
-                      Route="RepartidorMainView"/>
-    </FlyoutItem>
+        
+     </FlyoutItem>
+
     <FlyoutItem Title="Negocio">
         <ShellContent ContentTemplate="{DataTemplate views:NegocioMainView}"
                       Route="NegocioMainView"/>
->>>>>>> Stashed changes
-    </FlyoutItem>
-
-    <FlyoutItem Title="Repartidor">
-        <ShellContent ContentTemplate="{DataTemplate views:NegocioMainView}"/>
     </FlyoutItem>
 
     <Shell.FlyoutFooter>
