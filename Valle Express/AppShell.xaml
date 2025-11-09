@@ -7,6 +7,7 @@
     xmlns:views="clr-namespace:Valle_Express.Views"
     Shell.FlyoutBehavior="Flyout"
     Shell.NavBarIsVisible="False"
+    Shell.BackgroundColor="#d3a370"
     Title="Valle_Express">
 
     <Shell.FlyoutHeader >
