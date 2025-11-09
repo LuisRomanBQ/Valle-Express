@@ -1,12 +1,13 @@
-﻿namespace Valle_Express
+﻿using Valle_Express.Views;
+
+namespace Valle_Express
 {
     public partial class App : Application
     {
         public App()
         {
             InitializeComponent();
-
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new LoginView());
         }
     }
 }
