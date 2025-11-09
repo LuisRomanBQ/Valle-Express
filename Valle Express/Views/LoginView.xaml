@@ -26,7 +26,7 @@
                     VerticalOptions="Center" 
                     HorizontalOptions="Center" 
                     Margin="15"
-                    Clicked="Button_Clicked"/>
+                    Command="{Binding goToMain}"/>
             
             <Label Text= "Inicio Rapido con" 
                    VerticalOptions="Center" 
@@ -42,7 +42,7 @@
                         VerticalOptions="Center" 
                         HorizontalOptions="Center" 
                         Margin="15"
-                        Clicked="Button_Clicked"/>
+                        Command="{Binding goToMain}"/>
             </HorizontalStackLayout>
             
             <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
@@ -52,12 +52,12 @@
                         BackgroundColor="White" 
                         TextColor="Black" 
                         Margin="15"
-                        Clicked="Button_Clicked"/>
+                        Command="{Binding goToMain}"/>
                 
             </HorizontalStackLayout>
 
             <Label Text="¿No tienes cuenta?" HorizontalOptions="Center" VerticalOptions="Center"/>
-            <Label Text="Registrate aquí" TextColor="#d3a370" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Text="Registrate aquí" TextColor="#d3a370" HorizontalOptions="Center" VerticalOptions="Center" />
         </VerticalStackLayout>
 
 
