@@ -28,6 +28,10 @@
         <ShellContent ContentTemplate="{DataTemplate views:RepartidorMainView}"/>
     </FlyoutItem>
 
+    <FlyoutItem Title="Repartidor">
+        <ShellContent ContentTemplate="{DataTemplate views:NegocioMainView}"/>
+    </FlyoutItem>
+
     <Shell.FlyoutFooter>
         <Button Text="Cerrar Sesión"
                 BackgroundColor="Red"
