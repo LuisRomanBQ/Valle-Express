@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Valle_Express.Views.LoginView"
-             Title="LoginView">
+             Title="">
 
     <VerticalStackLayout Background= "White">
 
@@ -25,7 +25,8 @@
                     TextColor="White" 
                     VerticalOptions="Center" 
                     HorizontalOptions="Center" 
-                    Margin="15"/>
+                    Margin="15"
+                    Clicked="Button_Clicked"/>
             
             <Label Text= "O inicia con Google" 
                    VerticalOptions="Center" 
@@ -39,7 +40,8 @@
                         TextColor="Black" 
                         VerticalOptions="Center" 
                         HorizontalOptions="Center" 
-                        Margin="15"/>
+                        Margin="15"
+                        Clicked="Button_Clicked"/>
             </HorizontalStackLayout>
             
             <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
@@ -48,7 +50,8 @@
                 <Button Text="Continuar con Facebook" 
                         BackgroundColor="White" 
                         TextColor="Black" 
-                        Margin="15"/>
+                        Margin="15"
+                        Clicked="Button_Clicked"/>
                 
             </HorizontalStackLayout>
 

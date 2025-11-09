@@ -7,8 +7,7 @@ namespace Valle_Express
         public App()
         {
             InitializeComponent();
-
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new LoginView());
         }
     }
 }
