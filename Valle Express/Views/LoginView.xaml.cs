@@ -11,6 +11,6 @@ public partial class LoginView : ContentPage
     {
         Application.Current.MainPage = new AppShell();
 
-        await Shell.Current.GoToAsync($"//ClienteMainView");
+        await Shell.Current.GoToAsync($"///ClienteMainView");
     }
 }

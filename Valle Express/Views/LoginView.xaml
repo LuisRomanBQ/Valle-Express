@@ -12,11 +12,11 @@
 
         <VerticalStackLayout Background="WhiteSmoke" Margin="30" Padding="20">
             
-            <Label Text="Correo" FontAttributes="Bold" Margin="15"/>
+            <Label Text="Correo" FontAttributes="Bold" Margin="15" TextColor="Black"/>
 
             <Entry Placeholder="tu@dominio.com"/>
 
-            <Label Text="Contraseña" FontAttributes="Bold" Margin="15"/>
+            <Label Text="Contraseña" FontAttributes="Bold" Margin="15" TextColor="Black"/>
 
             <Entry IsPassword="True" Placeholder="********" />
 
@@ -28,10 +28,11 @@
                     Margin="15"
                     Clicked="Button_Clicked"/>
             
-            <Label Text= "O inicia con Google" 
+            <Label Text= "Inicio Rapido con" 
                    VerticalOptions="Center" 
                    HorizontalOptions="Center" 
-                   Margin="20"/>
+                   Margin="20"
+                   TextColor="Black"/>
 
             <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
                 <Image Source="google-icon.png"/>
