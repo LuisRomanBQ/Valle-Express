@@ -6,6 +6,7 @@
     xmlns:local="clr-namespace:Valle_Express"
     xmlns:views="clr-namespace:Valle_Express.Views"
     Shell.FlyoutBehavior="Flyout"
+    Shell.NavBarIsVisible="False"
     Title="Valle_Express">
 
     <Shell.FlyoutHeader >
@@ -18,12 +19,12 @@
         </StackLayout>
     </Shell.FlyoutHeader>
 
-    <FlyoutItem Title="Incio de Sesión">
-        <ShellContent ContentTemplate="{DataTemplate views:LoginView}"/>
+    <FlyoutItem Title="Home">
+        <ShellContent ContentTemplate="{DataTemplate views:ClienteMainView}"
+                      Route="ClienteMainView"/>
     </FlyoutItem>
 
-<<<<<<< Updated upstream
-    <FlyoutItem Title="Registro">
+    <FlyoutItem Title="Repartidor">
         <ShellContent ContentTemplate="{DataTemplate views:RepartidorMainView}"/>
 =======
     <FlyoutItem Title="Repartidor">
@@ -35,4 +36,15 @@
                       Route="NegocioMainView"/>
 >>>>>>> Stashed changes
     </FlyoutItem>
+
+    <FlyoutItem Title="Repartidor">
+        <ShellContent ContentTemplate="{DataTemplate views:NegocioMainView}"/>
+    </FlyoutItem>
+
+    <Shell.FlyoutFooter>
+        <Button Text="Cerrar Sesión"
+                BackgroundColor="Red"
+                TextColor="White"
+                Clicked="Button_Clicked"/>
+    </Shell.FlyoutFooter>
 </Shell>
