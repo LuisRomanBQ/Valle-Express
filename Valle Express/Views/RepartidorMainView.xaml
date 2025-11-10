@@ -4,10 +4,11 @@
              x:Class="Valle_Express.Views.RepartidorMainView"
              Title="RepartidorMainView">
     <ContentPage.Resources>
-        <Color x:Key="HeaderColor">#DBC297</Color>
-        <Color x:Key="AccentColor">#5C5C5C</Color>
+        <Color x:Key="HeaderColor">#d3a370</Color>
+        <Color x:Key="AccentColor">#333</Color>
         <Color x:Key="GreenColor">#A2E0A2</Color>
         <Color x:Key="DarkGreenColor">#008000</Color>
+        <Color x:Key="MainBGText">#FFFFFF</Color>
     </ContentPage.Resources>
 
     <ScrollView>
@@ -25,9 +26,6 @@
                     <VerticalStackLayout Grid.Column="1" Margin="10, 0, 0, 0" Spacing="0">
                         <Label Text="Repartidor" FontSize="16" FontAttributes="Bold" TextColor="{StaticResource AccentColor}"/>
                         <Label Text="Usuario Google" FontSize="14" TextColor="{StaticResource AccentColor}"/>
-                        <Frame HasShadow="False" CornerRadius="10" Padding="5, 2" Margin="0, 5, 0, 0" BackgroundColor="White" HorizontalOptions="Start">
-                            <Label Text="2 roles disponibles" FontSize="10" TextColor="{StaticResource AccentColor}" FontAttributes="Bold"/>
-                        </Frame>
                     </VerticalStackLayout>
 
                     <!-- Reemplazo del Grid con CornerRadius por un Frame para soportar CornerRadius -->
@@ -39,11 +37,11 @@
                 <Grid Grid.Row="1" ColumnDefinitions="*, Auto" Margin="0, 0, 0, 20">
 
                     <VerticalStackLayout Grid.Column="0" Spacing="5">
-                        <Label Text="Carlos Rodríguez" FontSize="24" FontAttributes="Bold" TextColor="Black"/>
-                        <Label Text="⭐ 4.9 • 156 entregas" FontSize="16" TextColor="{StaticResource AccentColor}"/>
+                        <Label Text="Carlos Rodríguez" FontSize="24" FontAttributes="Bold" TextColor="{StaticResource MainBGText}"/>
+                        <Label Text="⭐ 4.9 • 156 entregas" FontSize="16" TextColor="{StaticResource MainBGText}"/>
                     </VerticalStackLayout>
 
-                    <Switch Grid.Column="1" IsToggled="True" VerticalOptions="Center" ThumbColor="White" OnColor="{StaticResource DarkGreenColor}"/>
+                    <Switch Grid.Column="1" IsToggled="True" VerticalOptions="Center" ThumbColor="White" OnColor="{StaticResource DarkGreenColor}" BackgroundColor="White" />
                 </Grid>
 
                 <BoxView Grid.Row="2" HeightRequest="1" Color="Transparent"/>
