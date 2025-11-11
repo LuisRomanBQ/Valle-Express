@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Valle_Express.Views.RepartidorMainView"
-             Title="RepartidorMainView">
+             x:Class="Valle_Express.Views.RepartidorHistorialView"
+             Title="RepartidorHistorialView">
     <ContentPage.Resources>
         <Color x:Key="HeaderColor">#d3a370</Color>
         <Color x:Key="AccentColor">#333</Color>
@@ -10,7 +10,7 @@
         <Color x:Key="DarkGreenColor">#008000</Color>
         <Color x:Key="MainBGText">#FFFFFF</Color>
     </ContentPage.Resources>
-
+    
     <ScrollView>
         <VerticalStackLayout BackgroundColor="WhiteSmoke">
 
@@ -24,8 +24,8 @@
                     </Frame>
 
                     <VerticalStackLayout Grid.Column="1" Margin="10, 0, 0, 0" Spacing="0">
-                        <Label Text="Repartidor" FontSize="16" FontAttributes="Bold" TextColor="{StaticResource AccentColor}"/>
-                        <Label Text="Usuario Google" FontSize="14" TextColor="{StaticResource AccentColor}"/>
+                        <Label Text="Repartidor" FontSize="16" FontAttributes="Bold" TextColor="{StaticResource MainBGText}"/>
+                        <Label Text="Usuario Google" FontSize="14" TextColor="{StaticResource MainBGText}"/>
                     </VerticalStackLayout>
 
                     <!-- Reemplazo del Grid con CornerRadius por un Frame para soportar CornerRadius -->
@@ -41,82 +41,79 @@
                         <Label Text="⭐ 4.9 • 156 entregas" FontSize="16" TextColor="{StaticResource MainBGText}"/>
                     </VerticalStackLayout>
 
-                    <Switch Grid.Column="1" IsToggled="True" VerticalOptions="Center" OnColor="{StaticResource DarkGreenColor}" BackgroundColor="White" />
                 </Grid>
 
                 <BoxView Grid.Row="2" HeightRequest="1" Color="Transparent"/>
             </Grid>
 
-            <VerticalStackLayout BackgroundColor="{StaticResource HeaderColor}" Padding="20" Margin="0, 0, 0, 20">
-                <Label Text="Pedidos disponibles" FontSize="18" FontAttributes="Bold" TextColor="{StaticResource MainBGText}"/>
-                <Label Text="Hay pedidos cercanos esperando ser aceptados" FontSize="14" TextColor="{StaticResource MainBGText}" Margin="0, 5, 0, 10"/>
-
-                <Frame BackgroundColor="White" CornerRadius="10" Padding="10, 5" HorizontalOptions="Start" HasShadow="False" BorderColor="Transparent">
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding VerPedidosCommand}"/>
-                    </Frame.GestureRecognizers>
-                    <Label Text="Ver pedidos disponibles" TextColor="Black" FontAttributes="Bold" FontSize="16"/>
-                </Frame>
-            </VerticalStackLayout>
-
-            <VerticalStackLayout Padding="20, 0, 20, 20" Spacing="10" BackgroundColor="WhiteSmoke">
-                <Label Text="Accesos rápidos" FontSize="20" FontAttributes="Bold" TextColor="Black" Margin="0, 0, 0, 10"/>
+            <VerticalStackLayout Padding="20, 0, 20, 20" Spacing="10" BackgroundColor="WhiteSmoke" Margin="20">
+                <Label Text="Historial" FontSize="20" FontAttributes="Bold" TextColor="Black" Margin="0, 0, 0, 10"/>
 
                 <Frame BackgroundColor="White" CornerRadius="10" Padding="15" HasShadow="True" BorderColor="Transparent">
                     <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding IrAHistorialCommand}"/>
+                        <TapGestureRecognizer/>
                     </Frame.GestureRecognizers>
                     <Grid ColumnDefinitions="Auto, *, Auto">
                         <BoxView Grid.Column="0" BackgroundColor="{StaticResource HeaderColor}" WidthRequest="30" HeightRequest="30" CornerRadius="5"/>
                         <VerticalStackLayout Grid.Column="1" Margin="10, 0, 0, 0">
-                            <Label Text="Pedidos" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
-                            <Label Text="Ver historial de pedidos" FontSize="14" TextColor="{StaticResource AccentColor}"/>
+                            <Label Text="Prisión Pizza" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="Colonia Miravalle" FontSize="14" TextColor="{StaticResource AccentColor}"/>
                         </VerticalStackLayout>
-                        <Frame Grid.Column="2" BackgroundColor="{StaticResource DarkGreenColor}" CornerRadius="10" Padding="10, 2" HorizontalOptions="End" VerticalOptions="Center">
-                            <Label Text="2" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                        <Frame Grid.Column="2" BackgroundColor="WhiteSmoke" CornerRadius="10" Padding="10, 2" HorizontalOptions="End" VerticalOptions="Center" BorderColor="Transparent">
+                            <Label Text="3.4 Km" TextColor="Black" FontSize="14" FontAttributes="Bold"/>
+                        </Frame>
+                    </Grid>
+                </Frame>
+                
+                <Frame BackgroundColor="White" CornerRadius="10" Padding="15" HasShadow="True" BorderColor="Transparent">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer/>
+                    </Frame.GestureRecognizers>
+                    <Grid ColumnDefinitions="Auto, *, Auto">
+                        <BoxView Grid.Column="0" BackgroundColor="{StaticResource HeaderColor}" WidthRequest="30" HeightRequest="30" CornerRadius="5"/>
+                        <VerticalStackLayout Grid.Column="1" Margin="10, 0, 0, 0">
+                            <Label Text="Tec Mercado" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="Colonia Valle Dorado" FontSize="14" TextColor="{StaticResource AccentColor}"/>
+                        </VerticalStackLayout>
+                        <Frame Grid.Column="2" BackgroundColor="WhiteSmoke" CornerRadius="10" Padding="10, 2" HorizontalOptions="End" VerticalOptions="Center" BorderColor="Transparent">
+                            <Label Text="8.1 Km" TextColor="Black" FontSize="14" FontAttributes="Bold"/>
                         </Frame>
                     </Grid>
                 </Frame>
 
                 <Frame BackgroundColor="White" CornerRadius="10" Padding="15" HasShadow="True" BorderColor="Transparent">
                     <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding IrAGananciasCommand}"/>
+                        <TapGestureRecognizer/>
                     </Frame.GestureRecognizers>
-                    <Grid ColumnDefinitions="Auto, *">
+                    <Grid ColumnDefinitions="Auto, *, Auto">
                         <BoxView Grid.Column="0" BackgroundColor="{StaticResource HeaderColor}" WidthRequest="30" HeightRequest="30" CornerRadius="5"/>
                         <VerticalStackLayout Grid.Column="1" Margin="10, 0, 0, 0">
-                            <Label Text="Ganancias" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
-                            <Label Text="Historial de ingresos" FontSize="14" TextColor="{StaticResource AccentColor}"/>
+                            <Label Text="Tacos El Tremendo" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="Colonia Miravalle" FontSize="14" TextColor="{StaticResource AccentColor}"/>
                         </VerticalStackLayout>
+                        <Frame Grid.Column="2" BackgroundColor="WhiteSmoke" CornerRadius="10" Padding="10, 2" HorizontalOptions="End" VerticalOptions="Center" BorderColor="Transparent">
+                            <Label Text="5.2 Km" TextColor="Black" FontSize="14" FontAttributes="Bold"/>
+                        </Frame>
                     </Grid>
                 </Frame>
 
                 <Frame BackgroundColor="White" CornerRadius="10" Padding="15" HasShadow="True" BorderColor="Transparent">
                     <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding IrAUbicacionCommand}"/>
+                        <TapGestureRecognizer/>
                     </Frame.GestureRecognizers>
                     <Grid ColumnDefinitions="Auto, *, Auto">
                         <BoxView Grid.Column="0" BackgroundColor="{StaticResource HeaderColor}" WidthRequest="30" HeightRequest="30" CornerRadius="5"/>
                         <VerticalStackLayout Grid.Column="1" Margin="10, 0, 0, 0">
-                            <Label Text="Ubicación" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
-                            <Label Text="Funcion de ubicación" FontSize="14" TextColor="{StaticResource AccentColor}"/>
+                            <Label Text="C" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="Colonia Miravalle" FontSize="14" TextColor="{StaticResource AccentColor}"/>
                         </VerticalStackLayout>
-                        <BoxView Grid.Column="2" BackgroundColor="{StaticResource DarkGreenColor}" WidthRequest="10" HeightRequest="10" CornerRadius="5" HorizontalOptions="End" VerticalOptions="Center"/>
+                        <Frame Grid.Column="2" BackgroundColor="WhiteSmoke" CornerRadius="10" Padding="10, 2" HorizontalOptions="End" VerticalOptions="Center" BorderColor="Transparent">
+                            <Label Text="5.2 Km" TextColor="Black" FontSize="14" FontAttributes="Bold"/>
+                        </Frame>
                     </Grid>
                 </Frame>
+
             </VerticalStackLayout>
-
-            <Grid BackgroundColor="{StaticResource GreenColor}" ColumnDefinitions="*, Auto" Padding="20" Margin="20, 0, 20, 20" RowSpacing="0">
-                <VerticalStackLayout Grid.Column="0">
-                    <Label Text="Suscripción" FontSize="18" FontAttributes="Bold" TextColor="{StaticResource AccentColor}"/>
-                    <Label Text="Vence el: 29/11/2025" FontSize="14" TextColor="{StaticResource AccentColor}"/>
-                </VerticalStackLayout>
-
-                <Frame Grid.Column="1" BackgroundColor="White" CornerRadius="10" Padding="10, 5" HorizontalOptions="End" VerticalOptions="Center" HasShadow="False" BorderColor="Transparent">
-                    <Label Text="Activa" TextColor="{StaticResource DarkGreenColor}" FontAttributes="Bold" FontSize="16"/>
-                </Frame>
-            </Grid>
-
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

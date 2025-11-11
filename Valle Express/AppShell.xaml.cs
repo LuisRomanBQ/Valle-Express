@@ -10,6 +10,9 @@ namespace Valle_Express
             Routing.RegisterRoute(nameof(ClienteMainView), typeof(ClienteMainView));
             Routing.RegisterRoute(nameof(RepartidorMainView), typeof(RepartidorMainView));
             Routing.RegisterRoute(nameof(LoginView), typeof(LoginView));
+            Routing.RegisterRoute(nameof(RepartidorGananciasView), typeof(RepartidorGananciasView));
+            Routing.RegisterRoute(nameof(RepartidorUbicacionView), typeof(RepartidorUbicacionView));
+            Routing.RegisterRoute(nameof(RepartidorHistorialView), typeof(RepartidorHistorialView));
         }
 
         private void Button_Clicked(object sender, EventArgs e)
