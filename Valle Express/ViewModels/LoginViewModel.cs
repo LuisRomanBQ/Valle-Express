@@ -12,12 +12,17 @@ namespace Valle_Express.ViewModels
     internal class LoginViewModel
     {
         public ICommand goToMain => new Command(IniciarSesion);
+        public ICommand IrARegistroCommand => new Command(RegistroScreen);
 
         public async void IniciarSesion()
         {
             Application.Current.MainPage = new AppShell();
 
             await Shell.Current.GoToAsync($"///ClienteMainView");
+        }
+        public async void RegistroScreen()
+        {
+            await Shell.Current.GoToAsync($"RegistrarUsuarioView");
         }
     }
 }
