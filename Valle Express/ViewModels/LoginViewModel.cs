@@ -32,5 +32,9 @@ namespace Valle_Express.ViewModels
         {
             await Referencia.Navigation.PushAsync(new RegistroUsuarioView());
         }
+        public async void RegistroScreen()
+        {
+            await Shell.Current.GoToAsync($"RegistrarUsuarioView");
+        }
     }
 }

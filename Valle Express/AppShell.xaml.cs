@@ -13,6 +13,7 @@ namespace Valle_Express
             Routing.RegisterRoute(nameof(RepartidorGananciasView), typeof(RepartidorGananciasView));
             Routing.RegisterRoute(nameof(RepartidorUbicacionView), typeof(RepartidorUbicacionView));
             Routing.RegisterRoute(nameof(RepartidorHistorialView), typeof(RepartidorHistorialView));
+            Routing.RegisterRoute(nameof(RegistroUsuarioView), typeof(RegistroUsuarioView));
         }
 
         private void Button_Clicked(object sender, EventArgs e)
