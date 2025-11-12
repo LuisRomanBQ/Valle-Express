@@ -12,13 +12,25 @@ namespace Valle_Express.ViewModels
     [AddINotifyPropertyChangedInterface]
     internal class LoginViewModel
     {
-        public ICommand goToMain => new Command(IniciarSesion);
+        private readonly Page Referencia;
+        public ICommand goToMainCommand { get; }
+        public ICommand IrARegistroUsuarioCommand { get; }
+        public LoginViewModel(Page Referencia)
+        {
+            this.Referencia = Referencia;
+            goToMainCommand = new Command(async () => await IniciarSesion());
+            IrARegistroUsuarioCommand = new Command(async () => await IrARegistro());
+        }
 
-        public async void IniciarSesion()
+        private async Task IniciarSesion()
         {
             Application.Current.MainPage = new AppShell();
 
-            await Shell.Current.GoToAsync($"///ClienteMainView");
+            await Shell.Current.GoToAsync($"///{nameof(ClienteMainView)}");
+        }
+        private async Task IrARegistro()
+        {
+            await Referencia.Navigation.PushAsync(new RegistroUsuarioView());
         }
     }
 }
