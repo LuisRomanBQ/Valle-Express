@@ -57,7 +57,12 @@
             </HorizontalStackLayout>
 
             <Label Text="¿No tienes cuenta?" HorizontalOptions="Center" VerticalOptions="Center"/>
-            <Label Text="Registrate aquí" TextColor="#d3a370" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Button Text="Registrate aquí" 
+                    TextColor="#d3a370" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" 
+                    BackgroundColor="WhiteSmoke"
+                    Command="{Binding IrARegistroCommand}"/>
         </VerticalStackLayout>
 
 
