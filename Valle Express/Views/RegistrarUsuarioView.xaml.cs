@@ -1,9 +1,11 @@
 namespace Valle_Express.Views;
 
-public partial class RegistroUsuarioView : ContentPage {
-    public RegistroUsuarioView() {
-        InitializeComponent();
-    }
+public partial class RegistrarUsuarioView : ContentPage
+{
+	public RegistrarUsuarioView()
+	{
+		InitializeComponent();
+	}
     private async void OnCrearCuentaClicked(object sender, EventArgs e) {
         string nombre = txtNombre.Text;
         string correo = txtCorreo.Text;
@@ -30,13 +32,5 @@ public partial class RegistroUsuarioView : ContentPage {
         // Navegar a la página de inicio de sesión
         await Navigation.PushAsync(new LoginView());
     }
-
-
 }
-
-
-
-
-
-
 
