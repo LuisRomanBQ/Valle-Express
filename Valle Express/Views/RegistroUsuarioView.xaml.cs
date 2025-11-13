@@ -26,9 +26,9 @@ public partial class RegistroUsuarioView : ContentPage {
         await DisplayAlert("Éxito", $"Bienvenido, {nombre}!", "OK");
     }
 
-    private async void OnIniciarSesionTapped(object sender, TappedEventArgs e) {
+    private void OnIniciarSesionTapped(object sender, TappedEventArgs e) {
         // Navegar a la página de inicio de sesión
-        await Navigation.PushAsync(new LoginView());
+        Application.Current.MainPage = new NavigationPage(new LoginView());
     }
 
 
