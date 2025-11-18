@@ -87,25 +87,20 @@
             <Grid Grid.Row="3" ColumnDefinitions="*,Auto">
 
                 <!-- SearchBar -->
-                <Frame Grid.Column="0" 
-                       Padding="0"
-                       CornerRadius="25"
-                       BackgroundColor="White"
-                       HasShadow="False"
-                       Margin="0,0,10,0">
-                    <Grid ColumnDefinitions="Auto,*" Padding="15,0">
-                        <Image Grid.Column="0"                                
+                <Grid ColumnDefinitions="Auto,*" Padding="15,0">
+                    <Image Grid.Column="0"                                
                                WidthRequest="20" 
                                HeightRequest="20"
                                VerticalOptions="Center"
                                Margin="0,0,10,0"/>
-                        <Entry Grid.Column="1" 
+                    <SearchBar Grid.Column="1" 
                                Placeholder="Buscar negocios, productos o servicios..."
                                PlaceholderColor="#999"
                                TextColor="#333"
+                               Background="White"
+                               BackgroundColor="White"
                                VerticalOptions="Center"/>
-                    </Grid>
-                </Frame>
+                </Grid>
 
                 <!-- Botón de filtros -->
                 <Frame Grid.Column="1" 
@@ -183,7 +178,7 @@
                             <!-- Detalles de tiempo, distancia y envío -->
                             <Grid ColumnDefinitions="Auto,Auto,*,Auto" Margin="0,5,0,0">
                                 <HorizontalStackLayout Grid.Column="0" Spacing="4">
-                                    <Image Source="" 
+                                    <Image Source="pizza_italiana.png" 
                                            WidthRequest="16" 
                                            HeightRequest="16"/>
                                     <Label Text="25-35 min" 
@@ -194,7 +189,7 @@
                                 <HorizontalStackLayout Grid.Column="1" 
                                                      Spacing="4" 
                                                      Margin="15,0,0,0">
-                                    <Image Source="" 
+                                    <Image Source="pizza_italiana.png" 
                                            WidthRequest="16" 
                                            HeightRequest="16"/>
                                     <Label Text="1.2 km" 
