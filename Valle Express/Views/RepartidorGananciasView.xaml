@@ -46,26 +46,34 @@
 
         <Grid BackgroundColor="{StaticResource HeaderColor}" ColumnDefinitions="*, *" Padding="20, 0, 20, 20">
 
-            <Frame Grid.Column="0" BackgroundColor="White" CornerRadius="10" Padding="15" Margin="0, 0, 10, 0" HasShadow="True" BorderColor="Transparent">
-                <VerticalStackLayout Spacing="5">
-                    <Label Text="$ Hoy" FontSize="16" TextColor="{StaticResource AccentColor}"/>
-                    <Label Text="$85000 MXN" FontSize="20" FontAttributes="Bold" TextColor="Black"/>
-                </VerticalStackLayout>
-            </Frame>
 
-            <Frame Grid.Column="1" BackgroundColor="White" CornerRadius="10" Padding="15" Margin="10, 0, 0, 0" HasShadow="True" BorderColor="Transparent">
-                <VerticalStackLayout Spacing="5">
-                    <Label Text="📈 Total" FontSize="16" TextColor="{StaticResource AccentColor}"/>
-                    <Label Text="$2340000 MXN" FontSize="16" FontAttributes="Bold" TextColor="Black" Padding="5"/>
-                </VerticalStackLayout>
-            </Frame>
         </Grid>
 
-        <Grid BackgroundColor="White" ColumnDefinitions="Auto, *" Padding="20,0,20,0" HorizontalOptions="Center">
-            <Frame Grid.Column="0" BackgroundColor ="WhiteSmoke" CornerRadius="5" Padding="15" Margin="15" HasShadow="True" BorderColor="Transparent">
-                <Label Text="Inserte una grafica de barras* xd" TextColor="Black"/>
-            </Frame>
+        <Grid BackgroundColor="White" RowDefinitions="*, *" Padding="20,0,20,0" HorizontalOptions="Center" Margin="15">
+            <HorizontalStackLayout Spacing="10" Margin="0,0,15,0">
+                <Button Text="Hoy" TextColor="white" BackgroundColor="{StaticResource HeaderColor}"/>
+                
+                <Button Text="Ultima Semana" TextColor="white" BackgroundColor="{StaticResource HeaderColor}"/>
+                
+                <Button Text="Ultimo Mes" TextColor="white" BackgroundColor="{StaticResource HeaderColor}"/>
+            </HorizontalStackLayout>
+
+            <Grid BackgroundColor="White" RowDefinitions="Auto, *" ColumnDefinitions ="*,*" Padding="20,0,20,0" HorizontalOptions="Center" Grid.Row="1">
+                <Frame Grid.Column="0" BackgroundColor="WhiteSmoke" CornerRadius="10" Padding="15" Margin="10, 0, 10, 0" HasShadow="True" BorderColor="Transparent">
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Ingresos" FontSize="16" TextColor="{StaticResource AccentColor}"/>
+                        <Label Text="$850 MXN" FontSize="20" FontAttributes="Bold" TextColor="Black"/>
+                    </VerticalStackLayout>
+                </Frame>
+                <Frame Grid.Column="1" BackgroundColor="WhiteSmoke" CornerRadius="10" Padding="15" Margin="10, 0, 0, 0" HasShadow="True" BorderColor="Transparent">
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Pedidos" FontSize="16" TextColor="{StaticResource AccentColor}"/>
+                        <Label Text="14" FontSize="16" FontAttributes="Bold" TextColor="Black" Padding="5"/>
+                    </VerticalStackLayout>
+                </Frame>
+            </Grid>
         </Grid>
+        
 
     </VerticalStackLayout>
 </ContentPage>
