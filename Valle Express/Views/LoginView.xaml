@@ -35,7 +35,7 @@
                    TextColor="Black"/>
 
             <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                <Image Source="google-icon.png"/>
+                <Image Source="google_icon.png" Aspect="AspectFit"  HorizontalOptions="Start"/>
                 <Button Text="Continuar con Google" 
                         BackgroundColor="White" 
                         TextColor="Black" 
@@ -46,8 +46,7 @@
             </HorizontalStackLayout>
             
             <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                <Image Source="circle-facebook-logo-png-transparent-picture.png" />
-
+                <Image Source="circle_facebook.png" Aspect="AspectFit" WidthRequest="40" HeightRequest="40"/>
                 <Button Text="Continuar con Facebook" 
                         BackgroundColor="White" 
                         TextColor="Black" 
