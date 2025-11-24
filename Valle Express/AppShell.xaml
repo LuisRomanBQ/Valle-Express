@@ -7,22 +7,23 @@
     xmlns:views="clr-namespace:Valle_Express.Views"
     Shell.FlyoutBehavior="Flyout"
     Shell.NavBarIsVisible="False"
-    Shell.BackgroundColor="#d3a370"
+    Shell.FlyoutBackgroundColor="Wheat"
     Title="Valle_Express">
-
-    <Shell.FlyoutHeader >
+    
+    <Shell.FlyoutHeader>
         <StackLayout>
             <Label Text="Valle Express C.O"
-                   TextColor="Gray"
+                   TextColor="White"
                    FontSize="Medium"
                    Padding="30"
-                   BackgroundColor="White"/>
+                   BackgroundColor="#d3a370"/>
         </StackLayout>
     </Shell.FlyoutHeader>
 
     <FlyoutItem Title="Home">
         <ShellContent ContentTemplate="{DataTemplate views:ClienteMainView}"
-                      Route="ClienteMainView"/>
+                      Route="ClienteMainView"
+                     />
     </FlyoutItem>
 
     <FlyoutItem Title="Repartidor">

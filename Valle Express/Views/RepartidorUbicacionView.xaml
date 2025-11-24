@@ -26,10 +26,6 @@
                     <Label Text="Usuario Google" FontSize="14" TextColor="Gray"/>
                 </VerticalStackLayout>
 
-                <!-- Reemplazo del Grid con CornerRadius por un Frame para soportar CornerRadius -->
-                <Frame Grid.Column="2" HeightRequest="40" WidthRequest="40" BackgroundColor="White" CornerRadius="20" VerticalOptions="Center" HasShadow="False" Padding="0">
-                    <Label Text="👤" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black"/>
-                </Frame>
             </Grid>
 
             <Grid Grid.Row="1" BackgroundColor="White" RowDefinitions="*" Padding="20, 30, 20, 0" Margin="20">

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Valle_Express.Views.RepartidorHistorialView"
-             Title="RepartidorHistorialView">
+             x:Class="Valle_Express.Views.NegocioHistorialView"
+             Title="NegocioHistorialView">
     <ContentPage.Resources>
         <Color x:Key="HeaderColor">#d3a370</Color>
         <Color x:Key="AccentColor">#333</Color>
@@ -10,7 +10,7 @@
         <Color x:Key="DarkGreenColor">#008000</Color>
         <Color x:Key="MainBGText">#FFFFFF</Color>
     </ContentPage.Resources>
-    
+
     <ScrollView>
         <VerticalStackLayout BackgroundColor="WhiteSmoke">
 
@@ -24,7 +24,7 @@
                     </Frame>
 
                     <VerticalStackLayout Grid.Column="1" Margin="10, 0, 0, 0" Spacing="0">
-                        <Label Text="Repartidor" FontSize="16" FontAttributes="Bold" TextColor="{StaticResource MainBGText}"/>
+                        <Label Text="Negocio" FontSize="16" FontAttributes="Bold" TextColor="{StaticResource MainBGText}"/>
                         <Label Text="Usuario Google" FontSize="14" TextColor="{StaticResource MainBGText}"/>
                     </VerticalStackLayout>
 
@@ -33,7 +33,7 @@
                 <Grid Grid.Row="1" ColumnDefinitions="*, Auto" Margin="0, 0, 0, 20">
 
                     <VerticalStackLayout Grid.Column="0" Spacing="5">
-                        <Label Text="Carlos Rodríguez" FontSize="24" FontAttributes="Bold" TextColor="{StaticResource MainBGText}"/>
+                        <Label Text="Pizza Prision" FontSize="24" FontAttributes="Bold" TextColor="{StaticResource MainBGText}"/>
                         <Label Text="⭐ 4.9 • 156 entregas" FontSize="16" TextColor="{StaticResource MainBGText}"/>
                     </VerticalStackLayout>
 
@@ -60,7 +60,7 @@
                         </Frame>
                     </Grid>
                 </Frame>
-                
+
                 <Frame BackgroundColor="White" CornerRadius="10" Padding="15" HasShadow="True" BorderColor="Transparent">
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer/>
