@@ -46,12 +46,13 @@
 
         <Grid BackgroundColor="White" RowDefinitions="*, *" Padding="20,0,20,0" HorizontalOptions="Center" Margin="15">
             <HorizontalStackLayout Spacing="10" Margin="0,0,15,0">
-                <Button Text="Hoy" TextColor="white" BackgroundColor="{StaticResource HeaderColor}"/>
+                <Button Text="Hoy" TextColor="white" BackgroundColor="{StaticResource HeaderColor}" Command="{Binding GananciasDiarias}"/>
 
-                <Button Text="Ultima Semana" TextColor="white" BackgroundColor="{StaticResource HeaderColor}"/>
+                <Button Text="Ultima Semana" TextColor="white" BackgroundColor="{StaticResource HeaderColor}" Command="{Binding GananciasSemanales}"/>
 
-                <Button Text="Ultimo Mes" TextColor="white" BackgroundColor="{StaticResource HeaderColor}"/>
+                <Button Text="Ultimo Mes" TextColor="white" BackgroundColor="{StaticResource HeaderColor}" Command="{Binding GananciasMensuales}"/>
             </HorizontalStackLayout>
+
 
             <Grid BackgroundColor="White" RowDefinitions="Auto, *" ColumnDefinitions ="*,*" Padding="20" HorizontalOptions="Center" Grid.Row="1">
                 <Frame Grid.Column="0" BackgroundColor="WhiteSmoke" CornerRadius="10" Padding="15" Margin="10, 0, 10, 0" HasShadow="True" BorderColor="Transparent">
