@@ -12,42 +12,20 @@
     </ContentPage.Resources>
     
     <VerticalStackLayout>
-        <Grid BackgroundColor="WhiteSmoke" RowDefinitions="Auto, Auto, *" Padding="20, 30, 20, 0">
+        <Grid BackgroundColor="WhiteSmoke" RowDefinitions="Auto, Auto" Padding="20, 30, 20, 0">
 
-            <Grid Grid.Row="0" ColumnDefinitions="Auto, *, Auto" VerticalOptions="Start" Margin="0, 0, 0, 20">
-
-                <!-- Sustituye el Grid con CornerRadius por un Frame para soportar CornerRadius -->
-                <Frame Grid.Column="0" HeightRequest="40" WidthRequest="40" BackgroundColor="White" CornerRadius="20" VerticalOptions="Center" HasShadow="False" Padding="0">
-                    <Label Text="🚲" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black"/>
-                </Frame>
-
-                <VerticalStackLayout Grid.Column="1" Margin="10, 0, 0, 0" Spacing="0">
-                    <Label Text="Repartidor" FontSize="16" FontAttributes="Bold" TextColor="Gray"/>
-                    <Label Text="Usuario Google" FontSize="14" TextColor="Gray"/>
+            <Grid ColumnDefinitions="Auto, *, Auto" Grid.Row="0" Margin="10">
+                <BoxView Grid.Column="0" BackgroundColor="{StaticResource HeaderColor}" WidthRequest="30" HeightRequest="30" CornerRadius="5"/>
+                <VerticalStackLayout Grid.Column="1" Margin="10, 0, 0, 0">
+                    <Label Text="Prisión Pizza" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                    <Label Text="Colonia Miravalle" FontSize="14" TextColor="{StaticResource AccentColor}"/>
                 </VerticalStackLayout>
-
+                <Frame Grid.Column="2" BackgroundColor="White" CornerRadius="10" Padding="10, 2" HorizontalOptions="End" VerticalOptions="Center" BorderColor="Transparent">
+                    <Label Text="3.4 Km" TextColor="Black" FontSize="14" FontAttributes="Bold"/>
+                </Frame>
             </Grid>
+            <Image Source="mapexample.jpg" Aspect="AspectFill" Grid.Row="1" Margin="10"/>
 
-            <Grid Grid.Row="1" BackgroundColor="White" RowDefinitions="*" Padding="20, 30, 20, 0" Margin="20">
-                <Label Text="Inserte png del mapa plz" TextColor="Black" Grid.Row="0"/>
-            </Grid>
-
-            <Frame BackgroundColor="White" CornerRadius="10" Padding="15" HasShadow="True" BorderColor="Transparent" Grid.Row="2" VerticalOptions="End" Margin="10">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer/>
-                </Frame.GestureRecognizers>
-                <Grid ColumnDefinitions="Auto, *, Auto">
-                    <BoxView Grid.Column="0" BackgroundColor="{StaticResource HeaderColor}" WidthRequest="30" HeightRequest="30" CornerRadius="5"/>
-                    <VerticalStackLayout Grid.Column="1" Margin="10, 0, 0, 0">
-                        <Label Text="Prisión Pizza" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
-                        <Label Text="Colonia Miravalle" FontSize="14" TextColor="{StaticResource AccentColor}"/>
-                    </VerticalStackLayout>
-                    <Frame Grid.Column="2" BackgroundColor="WhiteSmoke" CornerRadius="10" Padding="10, 2" HorizontalOptions="End" VerticalOptions="Center" BorderColor="Transparent">
-                        <Label Text="3.4 Km" TextColor="Black" FontSize="14" FontAttributes="Bold"/>
-                    </Frame>
-                </Grid>
-            </Frame>
-            
         </Grid>
     </VerticalStackLayout>
 </ContentPage>

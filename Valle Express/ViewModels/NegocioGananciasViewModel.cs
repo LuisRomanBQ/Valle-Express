@@ -16,6 +16,10 @@ namespace Valle_Express.ViewModels
         public ICommand GananciasDiarias => new Command(DailyProfits);
         public ICommand GananciasSemanales => new Command(WeeklyProfits);
         public ICommand GananciasMensuales => new Command(MonthlyProfits);
+        public NegocioGananciasViewModel()
+        {
+            DailyProfits();
+        }
 
         public void DailyProfits()
         {

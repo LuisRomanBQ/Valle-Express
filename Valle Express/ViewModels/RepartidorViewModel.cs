@@ -13,10 +13,21 @@ namespace Valle_Express.ViewModels
 
     internal class RepartidorViewModel
     {
+        public bool Abierto { get; set; }
+        public string TextSwitch { get; set; } = "Activo";
         public ICommand IrAGananciasCommand => new Command(GananciasScreen);
         public ICommand IrAUbicacionCommand => new Command(UbicacionScreen);
         public ICommand IrAHistorialCommand => new Command(HistorialScreen);
+        public ICommand SwitchEstadoCommand => new Command(Switch);
 
+        public void Switch()
+        {
+            Abierto = !Abierto;
+            if (Abierto)
+                TextSwitch = "Activo";
+            else
+                TextSwitch = "Desconectado";
+        }
         public async void GananciasScreen()
         {
             await Shell.Current.GoToAsync(nameof(RepartidorGananciasView));

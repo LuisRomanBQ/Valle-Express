@@ -13,9 +13,26 @@ namespace Valle_Express.ViewModels
 
     internal class NegocioViewModel
     {
+        public bool Abierto { get; set; }
+        public string TextSwitch { get; set; } = "Abierto";
         public ICommand IrAGananciasCommand => new Command(GananciasScreen);
         public ICommand IrAMenuCommand => new Command(MenuScreen);
         public ICommand IrAHistorialCommand => new Command(HistorialScreen);
+        public ICommand SwitchEstadoCommand => new Command(Switch);
+
+        public NegocioViewModel()
+        {
+
+        }
+
+        public void Switch()
+        {
+            Abierto = !Abierto;
+            if (Abierto)
+                TextSwitch = "Abierto";
+            else
+                TextSwitch = "Cerrado";
+        }
 
         public async void GananciasScreen()
         {

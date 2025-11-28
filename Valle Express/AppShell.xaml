@@ -35,6 +35,10 @@
         <ShellContent ContentTemplate="{DataTemplate views:NegocioMainView}"
                       Route="NegocioMainView"/>
     </FlyoutItem>
+    <FlyoutItem Title="Configuracion">
+        <ShellContent ContentTemplate="{DataTemplate views:ConfiguracionView}"
+                      Route="ConfiguracionView"/>
+    </FlyoutItem>
 
     <Shell.FlyoutFooter>
         <Button Text="Cerrar Sesión"

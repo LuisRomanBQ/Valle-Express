@@ -49,7 +49,10 @@
             </HorizontalStackLayout>
             
             <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                <Image Source="circle-facebook-logo-png-transparent-picture.png" />
+                <Image Source="circle_facebook.png" 
+                       WidthRequest="40"
+                       HeightRequest="40"
+                       Aspect="AspectFit" />
 
                 <Button Text="Continuar con Facebook" 
                         BackgroundColor="White" 

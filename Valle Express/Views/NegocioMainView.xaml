@@ -37,7 +37,17 @@
                         <Label Text="⭐ 4.9 • 156 entregas" FontSize="16" TextColor="{StaticResource MainBGText}"/>
                     </VerticalStackLayout>
 
-                    <Switch Grid.Column="1" IsToggled="True" VerticalOptions="Center" OnColor="{StaticResource DarkGreenColor}" BackgroundColor="White" />
+                    <Grid ColumnDefinitions="*,*" VerticalOptions="Center" Grid.Column="1">
+                        <Label Text="{Binding TextSwitch}" TextColor="White" Grid.Column="0" VerticalOptions="Center"/>
+
+                        <Switch Grid.Column="1" 
+                                IsToggled="{Binding Abierto}" 
+                                VerticalOptions="Center" 
+                                OnColor="ForestGreen" 
+                                BackgroundColor="{StaticResource HeaderColor}">
+                        </Switch>
+                    </Grid>
+
                 </Grid>
             </Grid>
 

@@ -7,7 +7,7 @@
 
 
         <ScrollView>
-            <VerticalStackLayout Padding="25" Spacing="20">
+            <VerticalStackLayout Padding="25" Spacing="20" BackgroundColor="White">
 
                 <Label Text="Únete a Valle Express"
                    FontSize="24"
@@ -15,8 +15,14 @@
                    TextColor="#333"/>
 
                 <!-- Registro rápido -->
-                <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
-                    <Button Text="Google" 
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="5">
+
+                <Image Source="google.ico"
+                  WidthRequest="40"
+                  HeightRequest="40"
+                  Aspect="AspectFit" />
+                    
+                <Button Text="Google" 
                         BackgroundColor="#ffffff"
                         TextColor="#000"
                         WidthRequest="140"
@@ -24,7 +30,12 @@
                         BorderColor="#E0E0E0"
                         BorderWidth="1"
                         />
-                    <Button Text="Facebook"
+                <Image Source="circle_facebook.png" 
+                       WidthRequest="50"
+                       HeightRequest="50"
+                       Aspect="AspectFit" />
+
+                <Button Text="Facebook"
                         BackgroundColor="#1877F2"
                         TextColor="White"
                         WidthRequest="140"

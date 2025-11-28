@@ -18,6 +18,7 @@ namespace Valle_Express
             Routing.RegisterRoute(nameof(NegocioGanaciasView), typeof(NegocioGanaciasView));
             Routing.RegisterRoute(nameof(NegocioHistorialView), typeof(NegocioHistorialView));
             Routing.RegisterRoute(nameof(NegocioMenuView), typeof(NegocioMenuView));
+            Routing.RegisterRoute(nameof(ConfiguracionView), typeof(ConfiguracionView));
 
         }
 
