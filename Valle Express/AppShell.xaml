@@ -5,27 +5,22 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Valle_Express"
     xmlns:views="clr-namespace:Valle_Express.Views"
-    Shell.FlyoutBehavior="Flyout"
+    Shell.FlyoutBehavior="Disabled"
     Shell.NavBarIsVisible="False"
     Shell.FlyoutBackgroundColor="Wheat"
     Title="Valle_Express">
-    
-    <Shell.FlyoutHeader>
-        <StackLayout>
-            <Label Text="Valle Express C.O"
-                   TextColor="White"
-                   FontSize="Medium"
-                   Padding="30"
-                   BackgroundColor="#d3a370"/>
-        </StackLayout>
-    </Shell.FlyoutHeader>
+
+    <ShellContent
+        Route="LoginView"
+        ContentTemplate="{DataTemplate views:LoginView}"
+        FlyoutItemIsVisible="False"/>
 
     <FlyoutItem Title="Home">
-        <ShellContent ContentTemplate="{DataTemplate views:ClienteMainView}"
-                      Route="ClienteMainView"
-                     />
+        <ShellContent
+            Route="ClienteMainView"
+            ContentTemplate="{DataTemplate views:ClienteMainView}" />
     </FlyoutItem>
-
+    
     <FlyoutItem Title="Repartidor">
         <ShellContent ContentTemplate="{DataTemplate views:RepartidorMainView}"/>
         
@@ -46,4 +41,15 @@
                 TextColor="White"
                 Clicked="Button_Clicked"/>
     </Shell.FlyoutFooter>
+    
+    <Shell.FlyoutHeader>
+        <StackLayout>
+            <Label Text="Valle Express C.O"
+                   TextColor="White"
+                   FontSize="Medium"
+                   Padding="30"
+                   BackgroundColor="#d3a370"/>
+        </StackLayout>
+    </Shell.FlyoutHeader>
+
 </Shell>

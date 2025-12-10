@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Valle_Express.Models;
+using Valle_Express.Services;
 using Valle_Express.Views;
 
 namespace Valle_Express.ViewModels
@@ -13,17 +15,51 @@ namespace Valle_Express.ViewModels
     internal class LoginViewModel
     {
         public ICommand goToMain => new Command(IniciarSesion);
+        public ICommand fastLogin => new Command(InicioRapido);
         public ICommand IrARegistroUsuarioCommand => new Command(RegistrarUsuario);
-
+        public APIRestService RestService { get; set; } = new APIRestService();
+        public List<RegistroModel> Usuarios { get; set; }  = new List<RegistroModel>();
+        public string Correo {  get; set; }
+        public string Contraseña { get; set; }
+        public LoginViewModel()
+        {
+            CargarLista();
+        }
+        public async void CargarLista()
+        {
+            Usuarios = await RestService.GetUsuarios();
+        }
+        public async void InicioRapido()
+        {
+            Shell.Current.FlyoutBehavior = FlyoutBehavior.Flyout;
+            await Shell.Current.GoToAsync($"///ClienteMainView");
+        }
         public async void IniciarSesion()
         {
-            Application.Current.MainPage = new AppShell();
+            bool Logged = false;
+            foreach (var Usuario in Usuarios)
+            {
+                if(Usuario.UsuarioEmail == Correo)
+                {
+                    if(Usuario.UsuarioContraseña == Contraseña)
+                    {
+                        Logged = true;
+                        break;
+                    }
+                }
+            }
+            if (Logged)
+            {
+                Shell.Current.FlyoutBehavior = FlyoutBehavior.Flyout;
 
-            await Shell.Current.GoToAsync($"///ClienteMainView");
+                await Shell.Current.GoToAsync($"///ClienteMainView");
+            }
+            else
+                await Shell.Current.DisplayAlert("Inicio Fallido","Correo/ Contraseña Incorrectos","OK");
         }
         public async void RegistrarUsuario()
         {
-            Application.Current.MainPage = new NavigationPage(new RegistrarUsuarioView());
+            await Shell.Current.GoToAsync($"RegistrarUsuarioView");
         }
     }
 }
