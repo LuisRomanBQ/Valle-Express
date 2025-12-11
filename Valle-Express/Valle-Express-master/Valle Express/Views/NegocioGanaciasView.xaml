@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Valle_Express.Views.NegocioGanaciasView"
+             Title="NegocioGanaciasView">
+    <ContentPage.Resources>
+        <Color x:Key="HeaderColor">#d3a370</Color>
+        <Color x:Key="AccentColor">#333</Color>
+        <Color x:Key="GreenColor">#A2E0A2</Color>
+        <Color x:Key="DarkGreenColor">#008000</Color>
+        <Color x:Key="MainBGText">#FFFFFF</Color>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout Spacing="0" BackgroundColor="White">
+
+        <Grid BackgroundColor="{StaticResource HeaderColor}" RowDefinitions="Auto, Auto" Padding="20, 30, 20, 0">
+
+            <Grid Grid.Row="0" ColumnDefinitions="Auto, *, Auto" VerticalOptions="Start" Margin="0, 0, 0, 20">
+
+                <!-- Sustituye el Grid con CornerRadius por un Frame para soportar CornerRadius -->
+                <Frame Grid.Column="0" HeightRequest="40" WidthRequest="40" BackgroundColor="White" CornerRadius="20" VerticalOptions="Center" HasShadow="False" Padding="0">
+                    <Label Text="🚲" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black"/>
+                </Frame>
+
+                <VerticalStackLayout Grid.Column="1" Margin="10, 0, 0, 0" Spacing="0">
+                    <Label Text="Negocio" FontSize="16" FontAttributes="Bold" TextColor="{StaticResource AccentColor}"/>
+                    <Label Text="Usuario Google" FontSize="14" TextColor="{StaticResource AccentColor}"/>
+                </VerticalStackLayout>
+                
+            </Grid>
+
+            <Grid Grid.Row="1" ColumnDefinitions="*, Auto" Margin="0, 0, 0, 20">
+
+                <VerticalStackLayout Grid.Column="0" Spacing="5">
+                    <Label Text="Pizza Prision" FontSize="24" FontAttributes="Bold" TextColor="{StaticResource MainBGText}"/>
+                    <Label Text="⭐ 4.9 • 156 entregas" FontSize="16" TextColor="{StaticResource MainBGText}"/>
+                </VerticalStackLayout>
+            </Grid>
+
+        </Grid>
+
+        <Grid BackgroundColor="{StaticResource HeaderColor}" ColumnDefinitions="*, *" Padding="20, 0, 20, 20">
+
+
+        </Grid>
+
+        <Grid BackgroundColor="White" RowDefinitions="*, *" Padding="20,0,20,0" HorizontalOptions="Center" Margin="15">
+            <HorizontalStackLayout Spacing="10" Margin="0,0,15,0">
+                <Button Text="Hoy" TextColor="white" BackgroundColor="{StaticResource HeaderColor}" Command="{Binding GananciasDiarias}"/>
+
+                <Button Text="Ultima Semana" TextColor="white" BackgroundColor="{StaticResource HeaderColor}" Command="{Binding GananciasSemanales}"/>
+
+                <Button Text="Ultimo Mes" TextColor="white" BackgroundColor="{StaticResource HeaderColor}" Command="{Binding GananciasMensuales}"/>
+            </HorizontalStackLayout>
+
+
+            <Grid BackgroundColor="White" RowDefinitions="Auto, *" ColumnDefinitions ="*,*" Padding="20" HorizontalOptions="Center" Grid.Row="1">
+                <Frame Grid.Column="0" BackgroundColor="WhiteSmoke" CornerRadius="10" Padding="15" Margin="10, 0, 10, 0" HasShadow="True" BorderColor="Transparent">
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Ingresos" FontSize="16" TextColor="{StaticResource AccentColor}"/>
+                        <Label Text="{Binding Ganancias}" FontSize="20" FontAttributes="Bold" TextColor="Black"/>
+                    </VerticalStackLayout>
+                </Frame>
+                <Frame Grid.Column="1" BackgroundColor="WhiteSmoke" CornerRadius="10" Padding="15" Margin="10, 0, 0, 0" HasShadow="True" BorderColor="Transparent">
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Pedidos" FontSize="16" TextColor="{StaticResource AccentColor}"/>
+                        <Label Text="{Binding Pedidos}" FontSize="16" FontAttributes="Bold" TextColor="Black" Padding="5"/>
+                    </VerticalStackLayout>
+                </Frame>
+            </Grid>
+
+        </Grid>
+
+
+    </VerticalStackLayout>
+</ContentPage>

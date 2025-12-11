@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Valle_Express.Views.NegocioHistorialView"
+             Title="NegocioHistorialView">
+    <ContentPage.Resources>
+        <Color x:Key="HeaderColor">#d3a370</Color>
+        <Color x:Key="AccentColor">#333</Color>
+        <Color x:Key="GreenColor">#A2E0A2</Color>
+        <Color x:Key="DarkGreenColor">#008000</Color>
+        <Color x:Key="MainBGText">#FFFFFF</Color>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="WhiteSmoke">
+
+            <Grid BackgroundColor="{StaticResource HeaderColor}" RowDefinitions="Auto, Auto, 1" Padding="20, 30, 20, 0">
+
+                <Grid Grid.Row="0" ColumnDefinitions="Auto, *, Auto" VerticalOptions="Start" Margin="0, 0, 0, 20">
+
+                    <!-- Sustituye el Grid con CornerRadius por un Frame para soportar CornerRadius -->
+                    <Frame Grid.Column="0" HeightRequest="40" WidthRequest="40" BackgroundColor="White" CornerRadius="20" VerticalOptions="Center" HasShadow="False" Padding="0">
+                        <Label Text="🚲" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black"/>
+                    </Frame>
+
+                    <VerticalStackLayout Grid.Column="1" Margin="10, 0, 0, 0" Spacing="0">
+                        <Label Text="Negocio" FontSize="16" FontAttributes="Bold" TextColor="{StaticResource MainBGText}"/>
+                        <Label Text="Usuario Google" FontSize="14" TextColor="{StaticResource MainBGText}"/>
+                    </VerticalStackLayout>
+
+                </Grid>
+
+                <Grid Grid.Row="1" ColumnDefinitions="*, Auto" Margin="0, 0, 0, 20">
+
+                    <VerticalStackLayout Grid.Column="0" Spacing="5">
+                        <Label Text="Pizza Prision" FontSize="24" FontAttributes="Bold" TextColor="{StaticResource MainBGText}"/>
+                        <Label Text="⭐ 4.9 • 156 entregas" FontSize="16" TextColor="{StaticResource MainBGText}"/>
+                    </VerticalStackLayout>
+
+                </Grid>
+
+                <BoxView Grid.Row="2" HeightRequest="1" Color="Transparent"/>
+            </Grid>
+
+            <VerticalStackLayout Padding="20, 0, 20, 20" Spacing="10" BackgroundColor="WhiteSmoke" Margin="20">
+                <Label Text="Historial" FontSize="20" FontAttributes="Bold" TextColor="Black" Margin="0, 0, 0, 10"/>
+
+                <Frame BackgroundColor="White" CornerRadius="10" Padding="15" HasShadow="True" BorderColor="Transparent">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer/>
+                    </Frame.GestureRecognizers>
+                    <Grid ColumnDefinitions="Auto, *, Auto">
+                        <BoxView Grid.Column="0" BackgroundColor="{StaticResource HeaderColor}" WidthRequest="30" HeightRequest="30" CornerRadius="5"/>
+                        <VerticalStackLayout Grid.Column="1" Margin="10, 0, 0, 0">
+                            <Label Text="Prisión Pizza" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="Colonia Miravalle" FontSize="14" TextColor="{StaticResource AccentColor}"/>
+                        </VerticalStackLayout>
+                        <Frame Grid.Column="2" BackgroundColor="WhiteSmoke" CornerRadius="10" Padding="10, 2" HorizontalOptions="End" VerticalOptions="Center" BorderColor="Transparent">
+                            <Label Text="3.4 Km" TextColor="Black" FontSize="14" FontAttributes="Bold"/>
+                        </Frame>
+                    </Grid>
+                </Frame>
+
+                <Frame BackgroundColor="White" CornerRadius="10" Padding="15" HasShadow="True" BorderColor="Transparent">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer/>
+                    </Frame.GestureRecognizers>
+                    <Grid ColumnDefinitions="Auto, *, Auto">
+                        <BoxView Grid.Column="0" BackgroundColor="{StaticResource HeaderColor}" WidthRequest="30" HeightRequest="30" CornerRadius="5"/>
+                        <VerticalStackLayout Grid.Column="1" Margin="10, 0, 0, 0">
+                            <Label Text="Tec Mercado" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="Colonia Valle Dorado" FontSize="14" TextColor="{StaticResource AccentColor}"/>
+                        </VerticalStackLayout>
+                        <Frame Grid.Column="2" BackgroundColor="WhiteSmoke" CornerRadius="10" Padding="10, 2" HorizontalOptions="End" VerticalOptions="Center" BorderColor="Transparent">
+                            <Label Text="8.1 Km" TextColor="Black" FontSize="14" FontAttributes="Bold"/>
+                        </Frame>
+                    </Grid>
+                </Frame>
+
+                <Frame BackgroundColor="White" CornerRadius="10" Padding="15" HasShadow="True" BorderColor="Transparent">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer/>
+                    </Frame.GestureRecognizers>
+                    <Grid ColumnDefinitions="Auto, *, Auto">
+                        <BoxView Grid.Column="0" BackgroundColor="{StaticResource HeaderColor}" WidthRequest="30" HeightRequest="30" CornerRadius="5"/>
+                        <VerticalStackLayout Grid.Column="1" Margin="10, 0, 0, 0">
+                            <Label Text="Tacos El Tremendo" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="Colonia Miravalle" FontSize="14" TextColor="{StaticResource AccentColor}"/>
+                        </VerticalStackLayout>
+                        <Frame Grid.Column="2" BackgroundColor="WhiteSmoke" CornerRadius="10" Padding="10, 2" HorizontalOptions="End" VerticalOptions="Center" BorderColor="Transparent">
+                            <Label Text="5.2 Km" TextColor="Black" FontSize="14" FontAttributes="Bold"/>
+                        </Frame>
+                    </Grid>
+                </Frame>
+
+                <Frame BackgroundColor="White" CornerRadius="10" Padding="15" HasShadow="True" BorderColor="Transparent">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer/>
+                    </Frame.GestureRecognizers>
+                    <Grid ColumnDefinitions="Auto, *, Auto">
+                        <BoxView Grid.Column="0" BackgroundColor="{StaticResource HeaderColor}" WidthRequest="30" HeightRequest="30" CornerRadius="5"/>
+                        <VerticalStackLayout Grid.Column="1" Margin="10, 0, 0, 0">
+                            <Label Text="Hot Dogs El Pariente" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="Colonia Valle Verde" FontSize="14" TextColor="{StaticResource AccentColor}"/>
+                        </VerticalStackLayout>
+                        <Frame Grid.Column="2" BackgroundColor="WhiteSmoke" CornerRadius="10" Padding="10, 2" HorizontalOptions="End" VerticalOptions="Center" BorderColor="Transparent">
+                            <Label Text="2.1 Km" TextColor="Black" FontSize="14" FontAttributes="Bold"/>
+                        </Frame>
+                    </Grid>
+                </Frame>
+
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

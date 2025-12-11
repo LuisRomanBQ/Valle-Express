@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:Valle_Express.Views"
+             x:Class="Valle_Express.Views.ClienteMainView"
+             Title="ClienteMainView"
+             Shell.NavBarIsVisible="False">
+    
+    <Grid RowDefinitions="Auto,*">
+        
+        <Grid BackgroundColor="#D4A574" Padding="20,50,20,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Fila 1: Avatar y Usuario + Menú -->
+            <Grid Grid.Row="0" ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,15">
+
+                <!-- Avatar del usuario -->
+                <Frame Grid.Column="0" 
+                       WidthRequest="50" 
+                       HeightRequest="50" 
+                       CornerRadius="25"
+                       Padding="0"
+                       BackgroundColor="White"
+                       HasShadow="False">
+                    <Image Source="user_icon_232242.ico" Aspect="AspectFill" Margin="10"/>
+                </Frame>
+
+                <!-- Info del cliente -->
+                <VerticalStackLayout Grid.Column="1" 
+                                   VerticalOptions="Center" 
+                                   Margin="12,0,0,0">
+                    <Label Text="Cliente" 
+                           TextColor="White" 
+                           FontSize="12"/>
+                    <Label Text="Usuario Demo" 
+                           TextColor="White" 
+                           FontSize="16" 
+                           FontAttributes="Bold"/>
+                </VerticalStackLayout>
+
+                <!-- Botón de menú (hamburguesa) -->
+                <Frame Grid.Column="2" 
+                       WidthRequest="45" 
+                       HeightRequest="45" 
+                       CornerRadius="22.5"
+                       Padding="0"
+                       BackgroundColor="White"
+                       HasShadow="False">
+                    <Image Source="user_profile_icon_176439.ico"
+                           Aspect="AspectFit"
+                           Margin="10"/>
+                </Frame>
+            </Grid>
+
+            <!-- Fila 3: Ubicación de entrega -->
+            <Grid Grid.Row="2" 
+                  ColumnDefinitions="Auto,*" 
+                  Margin="0,0,0,15">
+                <Image Grid.Column="0" 
+                       Source="location_icon.png" 
+                       WidthRequest="20" 
+                       HeightRequest="20"
+                       VerticalOptions="Center"
+                       Margin="0,0,8,0"/>
+                <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
+                    <Label Text="Entregar en" 
+                           TextColor="White" 
+                           FontSize="12"/>
+                    <HorizontalStackLayout>
+                        <Label Text="Valle de Hermosillo, Sonora" 
+                               TextColor="White" 
+                               FontSize="14" 
+                               FontAttributes="Bold"/>
+                        <Label Text=" ›" 
+                               TextColor="White" 
+                               FontSize="14" 
+                               FontAttributes="Bold"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Grid>
+
+            <!-- Fila 4: Barra de búsqueda -->
+            <Grid Grid.Row="3" ColumnDefinitions="*,Auto">
+
+                <!-- SearchBar -->
+                <Grid ColumnDefinitions="*" Padding="15,0" Grid.Column="0">
+                    
+                    <SearchBar Grid.Column="0" 
+                               Placeholder="Buscar negocios, productos o servicios..."
+                               PlaceholderColor="#999"
+                               TextColor="#333"
+                               Background="White"
+                               BackgroundColor="White"
+                               VerticalOptions="Center"/>
+                </Grid>
+
+                <!-- Botón de filtros -->
+                <Frame Grid.Column="1" 
+                       WidthRequest="50" 
+                       HeightRequest="50" 
+                       CornerRadius="25"
+                       Padding="0"
+                       BackgroundColor="White"
+                       HasShadow="False">
+                    <Image Source="filtro.ico"
+                           Aspect="AspectFit"
+                           Margin="12"/>
+                </Frame>
+            </Grid>
+        </Grid>
+
+        <!-- Lista de negocios -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="15" BackgroundColor="White">
+
+                <!-- Título de sección -->
+                <Grid ColumnDefinitions="*,Auto" Margin="0,10,0,10">
+                    <Label Grid.Column="0" 
+                           Text="Todos los Negocios" 
+                           FontSize="20" 
+                           FontAttributes="Bold"
+                           TextColor="Gray"/>
+                    <Label Grid.Column="1" 
+                           Text="12" 
+                           FontSize="16" 
+                           TextColor="#999"
+                           VerticalOptions="Center"/>
+                </Grid>
+
+                <!-- Tarjeta 1: Pizza Napolitana -->
+                <Frame Padding="0" 
+                       CornerRadius="15" 
+                       HasShadow="True"
+                       BorderColor="Transparent">
+                    <Grid RowDefinitions="200,Auto">
+
+                        <!-- Imagen del negocio -->
+                        <Image Grid.Row="0"                               
+                               Aspect="AspectFill"
+                               Source="pizza_italiana.png"/>
+
+                        <!-- Badge de rating -->
+                        <Frame Grid.Row="0" 
+                               HorizontalOptions="End"
+                               VerticalOptions="Start"
+                               Margin="15"
+                               Padding="10,5"
+                               CornerRadius="15"
+                               BackgroundColor="White"
+                               HasShadow="False">
+                            <HorizontalStackLayout Spacing="4">
+                                <Label Text="⭐" FontSize="14"/>
+                                <Label Text="4.8" 
+                                       FontSize="14" 
+                                       FontAttributes="Bold"
+                                       TextColor="#333"/>
+                            </HorizontalStackLayout>
+                        </Frame>
+
+                        <!-- Info del negocio -->
+                        <VerticalStackLayout Grid.Row="1" Padding="15" Spacing="8">
+                            <Label Text="Pizza Napolitana" 
+                                   FontSize="18" 
+                                   FontAttributes="Bold"
+                                   TextColor="#333"/>
+                            <Label Text="Comida" 
+                                   FontSize="14" 
+                                   TextColor="#666"/>
+
+                            <!-- Detalles de tiempo, distancia y envío -->
+                            <Grid ColumnDefinitions="Auto,Auto,*,Auto" Margin="0,5,0,0">
+                                <HorizontalStackLayout Grid.Column="0" Spacing="4">
+                                    <Image Source="pizza_italiana.png" 
+                                           WidthRequest="16" 
+                                           HeightRequest="16"/>
+                                    <Label Text="25-35 min" 
+                                           FontSize="12" 
+                                           TextColor="#666"/>
+                                </HorizontalStackLayout>
+
+                                <HorizontalStackLayout Grid.Column="1" 
+                                                     Spacing="4" 
+                                                     Margin="15,0,0,0">
+                                    <Image Source="pizza_italiana.png" 
+                                           WidthRequest="16" 
+                                           HeightRequest="16"/>
+                                    <Label Text="1.2 km" 
+                                           FontSize="12" 
+                                           TextColor="#666"/>
+                                </HorizontalStackLayout>
+
+                                <Label Grid.Column="2" 
+                                       Text="Envío $25 MXN" 
+                                       FontSize="12" 
+                                       TextColor="#666"
+                                       HorizontalOptions="End"/>
+                            </Grid>
+                        </VerticalStackLayout>
+                    </Grid>
+                </Frame>
+
+                <!-- Tarjeta 2: Burger House -->
+                <Frame Padding="0" 
+                       CornerRadius="15" 
+                       HasShadow="True"
+                       BorderColor="Transparent">
+                    <Grid RowDefinitions="200,Auto">
+
+                        <Image Grid.Row="0" 
+                               Source="burger_house.jpg" 
+                               Aspect="AspectFill"/>
+
+                        <Frame Grid.Row="0" 
+                               HorizontalOptions="End"
+                               VerticalOptions="Start"
+                               Margin="15"
+                               Padding="10,5"
+                               CornerRadius="15"
+                               BackgroundColor="White"
+                               HasShadow="False">
+                            <HorizontalStackLayout Spacing="4">
+                                <Label Text="⭐" FontSize="14"/>
+                                <Label Text="4.6" 
+                                       FontSize="14" 
+                                       FontAttributes="Bold"
+                                       TextColor="#333"/>
+                            </HorizontalStackLayout>
+                        </Frame>
+
+                        <VerticalStackLayout Grid.Row="1" Padding="15" Spacing="8">
+                            <Label Text="Burger House" 
+                                   FontSize="18" 
+                                   FontAttributes="Bold"
+                                   TextColor="#333"/>
+                            <Label Text="Comida" 
+                                   FontSize="14" 
+                                   TextColor="#666"/>
+
+                            <Grid ColumnDefinitions="Auto,Auto,*,Auto" Margin="0,5,0,0">
+                                <HorizontalStackLayout Grid.Column="0" Spacing="4">
+                                    <Image Source="clock_icon.png" 
+                                           WidthRequest="16" 
+                                           HeightRequest="16"/>
+                                    <Label Text="30-40 min" 
+                                           FontSize="12" 
+                                           TextColor="#666"/>
+                                </HorizontalStackLayout>
+
+                                <HorizontalStackLayout Grid.Column="1" 
+                                                     Spacing="4" 
+                                                     Margin="15,0,0,0">
+                                    <Image Source="location_small_icon.png" 
+                                           WidthRequest="16" 
+                                           HeightRequest="16"/>
+                                    <Label Text="2.5 km" 
+                                           FontSize="12" 
+                                           TextColor="#666"/>
+                                </HorizontalStackLayout>
+
+                                <Label Grid.Column="2" 
+                                       Text="Envío $30 MXN" 
+                                       FontSize="12" 
+                                       TextColor="#666"
+                                       HorizontalOptions="End"/>
+                            </Grid>
+                        </VerticalStackLayout>
+                    </Grid>
+                </Frame>
+
+                <!-- Tarjeta 3: Farmacia -->
+                <Frame Padding="0" 
+                       CornerRadius="15" 
+                       HasShadow="True"
+                       BorderColor="Transparent">
+                    <Grid RowDefinitions="200,Auto">
+
+                        <Image Grid.Row="0" 
+                               Source="farmacia.jpg" 
+                               Aspect="AspectFill"/>
+
+                        <Frame Grid.Row="0" 
+                               HorizontalOptions="End"
+                               VerticalOptions="Start"
+                               Margin="15"
+                               Padding="10,5"
+                               CornerRadius="15"
+                               BackgroundColor="White"
+                               HasShadow="False">
+                            <HorizontalStackLayout Spacing="4">
+                                <Label Text="⭐" FontSize="14"/>
+                                <Label Text="4.9" 
+                                       FontSize="14" 
+                                       FontAttributes="Bold"
+                                       TextColor="#333"/>
+                            </HorizontalStackLayout>
+                        </Frame>
+
+                        <VerticalStackLayout Grid.Row="1" Padding="15" Spacing="8">
+                            <Label Text="Farmacia del Ahorro" 
+                                   FontSize="18" 
+                                   FontAttributes="Bold"
+                                   TextColor="#333"/>
+                            <Label Text="Salud y Farmacia" 
+                                   FontSize="14" 
+                                   TextColor="#666"/>
+
+                            <Grid ColumnDefinitions="Auto,Auto,*,Auto" Margin="0,5,0,0">
+                                <HorizontalStackLayout Grid.Column="0" Spacing="4">
+                                    <Image Source="clock_icon.png" 
+                                           WidthRequest="16" 
+                                           HeightRequest="16"/>
+                                    <Label Text="15-25 min" 
+                                           FontSize="12" 
+                                           TextColor="#666"/>
+                                </HorizontalStackLayout>
+
+                                <HorizontalStackLayout Grid.Column="1" 
+                                                     Spacing="4" 
+                                                     Margin="15,0,0,0">
+                                    <Image Source="location_small_icon.png" 
+                                           WidthRequest="16" 
+                                           HeightRequest="16"/>
+                                    <Label Text="0.8 km" 
+                                           FontSize="12" 
+                                           TextColor="#666"/>
+                                </HorizontalStackLayout>
+
+                                <Label Grid.Column="2" 
+                                       Text="Envío $20 MXN" 
+                                       FontSize="12" 
+                                       TextColor="#666"
+                                       HorizontalOptions="End"/>
+                            </Grid>
+                        </VerticalStackLayout>
+                    </Grid>
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Valle_Express.Views.LoginView"
+             NavigationPage.HasNavigationBar="False">
+
+    <VerticalStackLayout Background= "White">
+
+        <VerticalStackLayout Background="#d3a370">
+            <Label Text="Valle Express C.O."  VerticalOptions="Center" HorizontalOptions="Center" Margin="5" TextColor="White"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Background="WhiteSmoke" Margin="30" Padding="20">
+            
+            <Label Text="Correo" FontAttributes="Bold" Margin="15" TextColor="Black"/>
+
+            <Entry Placeholder="tu@dominio.com" BackgroundColor="White" Text="{Binding Correo}"/>
+
+            <Label Text="Contraseña" FontAttributes="Bold" Margin="15" TextColor="Black"/>
+
+            <Entry IsPassword="True" Placeholder="********" BackgroundColor="White" Text="{Binding Contraseña}"/>
+
+            <Button Text="Iniciar Sesión" 
+                    BackgroundColor="#d3a370"
+                    TextColor="White" 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" 
+                    Margin="15"
+                    Command="{Binding goToMain}"/>
+            
+            <Label Text= "Inicio Rapido con" 
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center" 
+                   Margin="20"
+                   TextColor="Black"/>
+
+            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <Image Source="google.ico"
+                  WidthRequest="40"
+                  HeightRequest="40"
+                  Aspect="AspectFit" />
+                <Button Text="Continuar con Google" 
+                        BackgroundColor="White" 
+                        TextColor="Black" 
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center" 
+                        Margin="15"
+                        Command="{Binding fastLogin}"/>
+            </HorizontalStackLayout>
+            
+            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <Image Source="circle_facebook.png" 
+                       WidthRequest="40"
+                       HeightRequest="40"
+                       Aspect="AspectFit" />
+
+                <Button Text="Continuar con Facebook" 
+                        BackgroundColor="White" 
+                        TextColor="Black" 
+                        Margin="15"
+                        Command="{Binding fastLogin}"/>
+                
+            </HorizontalStackLayout>
+
+            <Label Text="¿No tienes cuenta?" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Button Command="{Binding IrARegistroUsuarioCommand}" Text="Registrate aquí" 
+                    TextColor="#d3a370" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center"
+                    BackgroundColor="WhiteSmoke"/>
+        </VerticalStackLayout>
+
+
+        <Label Text="Valle Express S.A de C.V" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <Label Text="Derechos Reservados" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+    </VerticalStackLayout>
+    
+</ContentPage>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Valle_Express.Views.RepartidorUbicacionView"
+             Title="RepartidorUbicacionView">
+    <ContentPage.Resources>
+        <Color x:Key="HeaderColor">#d3a370</Color>
+        <Color x:Key="AccentColor">#333</Color>
+        <Color x:Key="GreenColor">#A2E0A2</Color>
+        <Color x:Key="DarkGreenColor">#008000</Color>
+        <Color x:Key="MainBGText">#FFFFFF</Color>
+    </ContentPage.Resources>
+    
+    <VerticalStackLayout>
+        <Grid BackgroundColor="WhiteSmoke" RowDefinitions="Auto, Auto" Padding="20, 30, 20, 0">
+
+            <Grid ColumnDefinitions="Auto, *, Auto" Grid.Row="0" Margin="10">
+                <BoxView Grid.Column="0" BackgroundColor="{StaticResource HeaderColor}" WidthRequest="30" HeightRequest="30" CornerRadius="5"/>
+                <VerticalStackLayout Grid.Column="1" Margin="10, 0, 0, 0">
+                    <Label Text="Prisión Pizza" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                    <Label Text="Colonia Miravalle" FontSize="14" TextColor="{StaticResource AccentColor}"/>
+                </VerticalStackLayout>
+                <Frame Grid.Column="2" BackgroundColor="White" CornerRadius="10" Padding="10, 2" HorizontalOptions="End" VerticalOptions="Center" BorderColor="Transparent">
+                    <Label Text="3.4 Km" TextColor="Black" FontSize="14" FontAttributes="Bold"/>
+                </Frame>
+            </Grid>
+            <Image Source="mapexample.jpg" Aspect="AspectFill" Grid.Row="1" Margin="10"/>
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

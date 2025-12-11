@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Valle_Express.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Valle_Express"
+    xmlns:views="clr-namespace:Valle_Express.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False"
+    Shell.FlyoutBackgroundColor="Wheat"
+    Title="Valle_Express">
+
+    <ShellContent
+        Route="LoginView"
+        ContentTemplate="{DataTemplate views:LoginView}"
+        FlyoutItemIsVisible="False"/>
+
+    <FlyoutItem Title="Home">
+        <ShellContent
+            Route="ClienteMainView"
+            ContentTemplate="{DataTemplate views:ClienteMainView}" />
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Repartidor">
+        <ShellContent ContentTemplate="{DataTemplate views:RepartidorMainView}"/>
+        
+     </FlyoutItem>
+
+    <FlyoutItem Title="Negocio">
+        <ShellContent ContentTemplate="{DataTemplate views:NegocioMainView}"
+                      Route="NegocioMainView"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Configuracion">
+        <ShellContent ContentTemplate="{DataTemplate views:ConfiguracionView}"
+                      Route="ConfiguracionView"/>
+    </FlyoutItem>
+
+    <Shell.FlyoutFooter>
+        <Button Text="Cerrar Sesión"
+                BackgroundColor="Red"
+                TextColor="White"
+                Clicked="Button_Clicked"/>
+    </Shell.FlyoutFooter>
+    
+    <Shell.FlyoutHeader>
+        <StackLayout>
+            <Label Text="Valle Express C.O"
+                   TextColor="White"
+                   FontSize="Medium"
+                   Padding="30"
+                   BackgroundColor="#d3a370"/>
+        </StackLayout>
+    </Shell.FlyoutHeader>
+
+</Shell>

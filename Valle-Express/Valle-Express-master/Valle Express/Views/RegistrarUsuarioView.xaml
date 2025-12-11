@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Valle_Express.Views.RegistrarUsuarioView"
+             Title=""
+             NavigationPage.HasNavigationBar="False">
+
+
+        <ScrollView>
+            <VerticalStackLayout Padding="25" Spacing="20" BackgroundColor="White">
+
+                <Label Text="Únete a Valle Express"
+                   FontSize="24"
+                   HorizontalOptions="Center"
+                   TextColor="#333"/>
+
+                <!-- Registro rápido -->
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="5">
+
+                <Image Source="google.ico"
+                  WidthRequest="40"
+                  HeightRequest="40"
+                  Aspect="AspectFit" />
+                    
+                <Button Text="Google" 
+                        BackgroundColor="#ffffff"
+                        TextColor="#000"
+                        WidthRequest="140"
+                        CornerRadius="10"
+                        BorderColor="#E0E0E0"
+                        BorderWidth="1"
+                        />
+                <Image Source="circle_facebook.png" 
+                       WidthRequest="50"
+                       HeightRequest="50"
+                       Aspect="AspectFit" />
+
+                <Button Text="Facebook"
+                        BackgroundColor="#1877F2"
+                        TextColor="White"
+                        WidthRequest="140"
+                        CornerRadius="10"/>
+                </HorizontalStackLayout>
+
+                <Label Text="O completa el formulario"
+                   FontAttributes="Italic"
+                   HorizontalOptions="Center"
+                   TextColor="#666"/>
+
+                <!-- Campos del formulario -->
+                <VerticalStackLayout Spacing="15">
+
+                    <Entry x:Name="txtNombre"
+                       Placeholder="Nombre completo"
+                       PlaceholderColor="#AAA"
+                       Keyboard="Text"/>
+
+                    <Entry x:Name="txtCorreo"
+                       Placeholder="Correo electrónico"
+                       PlaceholderColor="#AAA"
+                       Keyboard="Email"/>
+
+                    <Entry x:Name="txtTelefono"
+                       Placeholder="Teléfono"
+                       PlaceholderColor="#AAA"
+                       Keyboard="Telephone"/>
+
+                    <Entry x:Name="txtPassword"
+                       Placeholder="Contraseña"
+                       IsPassword="True"
+                       PlaceholderColor="#AAA"/>
+                </VerticalStackLayout>
+
+                <!-- Botón Crear cuenta -->
+                <Button Text="Crear Cuenta"
+                    BackgroundColor="#D4A373"
+                    TextColor="White"
+                    CornerRadius="10"
+                    HeightRequest="45"
+                    Clicked="OnCrearCuentaClicked"/>
+
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Label Text="¿Ya tienes cuenta?"
+                       TextColor="#555"/>
+                    <Label Text=" Inicia sesión"
+                       TextColor="#D4A373"
+                       FontAttributes="Bold">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnIniciarSesionTapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </HorizontalStackLayout>
+
+                <Label Text="Valle Express 🌾"
+                   FontSize="12"
+                   HorizontalOptions="Center"
+                   TextColor="#999"/>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>
+
