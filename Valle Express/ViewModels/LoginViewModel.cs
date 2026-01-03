@@ -17,15 +17,12 @@ namespace Valle_Express.ViewModels
         public ICommand goToMain => new Command(IniciarSesion);
         public ICommand fastLogin => new Command(InicioRapido);
         public ICommand IrARegistroUsuarioCommand => new Command(RegistrarUsuario);
-        public APIRestService RestService { get; set; } = new APIRestService();
-        public List<RegistroModel> Usuarios { get; set; }  = new List<RegistroModel>();
+        public UsuarioService RestService { get; set; } = new UsuarioService();
+        public List<Usuario> Usuarios { get; set; }  = new List<Usuario>();
         public string Correo {  get; set; }
         public string Contraseña { get; set; }
-        public LoginViewModel()
-        {
-            CargarLista();
-        }
-        public async void CargarLista()
+
+        public async Task CargarLista()
         {
             Usuarios = await RestService.GetUsuarios();
         }
@@ -36,12 +33,21 @@ namespace Valle_Express.ViewModels
         }
         public async void IniciarSesion()
         {
+            if (Usuarios == null || Usuarios.Count == 0)
+            {
+                Usuarios = await RestService.GetUsuarios();
+            }
             bool Logged = false;
+            await Shell.Current.DisplayAlert(
+    "DEBUG",
+    $"Usuarios cargados: {Usuarios.Count}",
+    "OK"
+);
             foreach (var Usuario in Usuarios)
             {
                 if(Usuario.UsuarioEmail == Correo)
                 {
-                    if(Usuario.UsuarioContraseña == Contraseña)
+                    if(Usuario.UsuarioHash == Contraseña)
                     {
                         Logged = true;
                         break;

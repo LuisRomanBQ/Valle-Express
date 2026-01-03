@@ -14,11 +14,11 @@
             
             <Label Text="Correo" FontAttributes="Bold" Margin="15" TextColor="Black"/>
 
-            <Entry Placeholder="tu@dominio.com" BackgroundColor="White" Text="{Binding Correo}"/>
+            <Entry Placeholder="tu@dominio.com" BackgroundColor="White" Text="{Binding Correo}" TextColor="Black"/>
 
             <Label Text="Contraseña" FontAttributes="Bold" Margin="15" TextColor="Black"/>
 
-            <Entry IsPassword="True" Placeholder="********" BackgroundColor="White" Text="{Binding Contraseña}"/>
+            <Entry IsPassword="True" Placeholder="********" BackgroundColor="White" Text="{Binding Contraseña}" TextColor="Black"/>
 
             <Button Text="Iniciar Sesión" 
                     BackgroundColor="#d3a370"
